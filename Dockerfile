@@ -5,5 +5,5 @@ RUN git clone https://mirror.ghproxy.com/https://github.com/phpredis/phpredis /u
 RUN docker-php-ext-install redis
 RUN cd /var/www/html
 EXPOSE 80
-CMD ["apache2 -D FOREGROUND"]
+CMD ["apache2-foreground"]
 
