@@ -1,4 +1,5 @@
 FROM wordpress
+LABEL org.opencontainers.image.source=https://github.com/AkarinLiu/wpd-redis
 RUN echo 'deb https://mirrors.huaweicloud.com/debian/ bookworm main non-free contrib' > /etc/apt/sources.list
 RUN apt update && apt install -y libpq-dev git
 RUN git clone https://mirror.ghproxy.com/https://github.com/phpredis/phpredis /usr/src/php/ext/redis
